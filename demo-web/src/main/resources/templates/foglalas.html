@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title>Időpontfoglalás</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/index.css" type="text/css" rel="stylesheet">
+</head>
+<body class="idopontfoglalas-background">
+<h1>Időpontfoglalás</h1>
+<form th:action="@{/foglalas}" method="post">
+    <label for="nev">Név:</label>
+    <input type="text" id="nev" name="nev" required><br>
+
+    <label for="szuletesi_ido">Születési idő:</label>
+    <input type="date" id="szuletesi_ido" name="szuletesi_ido" required><br>
+
+    <label for="telefonszam">Telefonszám:</label>
+    <input type="tel" id="telefonszam" name="telefonszam" pattern="[0-9]+" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="osztaly">Válasszon osztályt:</label>
+    <select id="osztaly" name="osztaly" required>
+        <option value="" disabled selected>Válasszon osztályt...</option>
+        <option value="Kardiológia">Kardiológia</option>
+        <option value="Bőrgyógyászat">Bőrgyógyászat</option>
+        <option value="Fogászat">Fogászat</option>
+        <option value="Belgyógyászat">Belgyógyászat</option>
+        <option value="Fül-orr-gégészet">Fül-orr-gégészet</option>
+    </select><br>
+    <button type="submit" id="foglal-gomb">Foglalás</button>
+</form>
+<a th:href="@{/}" class="back-link">Vissza</a>
+</body>
+</html>

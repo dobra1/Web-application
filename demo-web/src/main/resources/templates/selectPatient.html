@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title>Patients</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body class="patients-background">
+<div th:if="${errorMessage}">
+    <p class="error" th:text="${errorMessage}"></p>
+</div>
+
+<div th:if="${patients.isEmpty()}">
+    <h1>No patients</h1>
+</div>
+<div th:unless="${patients.isEmpty()}">
+    <h1>Patients list</h1>
+    <form method="POST" th:action="(${mode.equals('delete')})?@{/delPatient}:@{/modPatientForm}">
+        <label for="patient">Name:</label>
+        <select id="patient" name="id" required>
+            <option th:each="patient : ${patients}" th:text="${patient.name}"
+                    th:value="${patient.id}"></option>
+        </select>
+        <input type="submit" th:value="(${mode.equals('delete')})?'Delete':'Modify'" />
+    </form>
+    <a th:href="@{/}" class="sel-back-link">Back</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,567 @@
+
+/* add Doctors*/
+.add-doctor {
+    background-image: url("1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.add-doctor h1 {
+    font-family: "italic";
+    font-size: 35px;
+    position: relative;
+    left:500px;
+}
+
+.doctors-background {
+    background-image: url("11.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.add-doctor-back-link {
+    padding: 10px 25px;
+    background-color:transparent;
+    color: rgba(1, 3, 12, 0.96);
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    bottom: 390px;
+    font-size: 20px;
+    right:280px;
+
+}
+.add-doctor-back-link:hover {
+    text-decoration: underline;
+}
+
+/* add Patients */
+body.add-patient {
+    background-color: #f2f2f2;
+    font-family: 'italic';
+    padding: 20px;
+}
+body.add-patient h1 {
+    position:relative;
+    left:450px;
+    font-size:35px;
+
+}
+
+/* Form elemre vonatkozÃƒÆ’Ã‚Â³ stÃƒÆ’Ã‚Â­lusok a .add-patient class esetÃƒÆ’Ã‚Â©n */
+body.add-patient form {
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+
+/* Label elemekre vonatkozÃƒÆ’Ã‚Â³ stÃƒÆ’Ã‚Â­lusok a .add-patient class esetÃƒÆ’Ã‚Â©n */
+body.add-patient label {
+    display:flex;
+    margin-bottom: 10px;
+
+}
+
+/* Input elemekre vonatkozÃƒÆ’Ã‚Â³ stÃƒÆ’Ã‚Â­lusok a .add-patient class esetÃƒÆ’Ã‚Â©n */
+body.add-patient input {
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 10px;
+    margin-left:7px;
+
+}
+
+/* Select elemre vonatkozÃƒÆ’Ã‚Â³ stÃƒÆ’Ã‚Â­lusok a .add-patient class esetÃƒÆ’Ã‚Â©n */
+body.add-patient select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+
+}
+
+/* Gombokra vonatkozÃƒÆ’Ã‚Â³ stÃƒÆ’Ã‚Â­lusok a .add-patient class esetÃƒÆ’Ã‚Â©n */
+body.add-patient input[type="submit"],
+body.add-patient {
+    background-color: white;
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: inline;
+    cursor: pointer;
+    margin-left: 2px;
+    border-radius:5px;
+    font-family:'italic';
+    font-size:15px;
+    width: 100%;
+}
+.add-patient-back-link {
+    background-color: transparent;
+    color: #0c0101;
+    padding: 12px;
+    text-decoration: none;
+    display: inline;
+    cursor: pointer;
+    position: relative;
+    right:115%;
+    top:-580px;
+    border-radius:5px;
+    font-size: 20px;
+    font-weight:bolder;
+}
+.add-patient-back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Gombok hover ÃƒÆ’Ã‚Â¡llapotra vonatkozÃƒÆ’Ã‚Â³ stÃƒÆ’Ã‚Â­lusok a .add-patient class esetÃƒÆ’Ã‚Â©n */
+body.add-patient input[type="submit"]:hover,
+body.add-patient  {
+    background-color: #a6c6e1;
+}
+
+/*doctorList*/
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+}
+
+th, td {
+    border: 2px solid rgba(21, 22, 23, 0.93); /* Keret vastagsÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡g ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©s szÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â­n */
+    padding: 10px;
+    text-align: left;
+
+}
+
+th {
+    background-color: #2ecc71;
+    color: #fff;}
+/*PatientList*/
+.patients-background {
+    background-image: url('2.jpg');
+    background-size: cover;
+    color: #0b0a0a;
+    padding:10px
+}
+.th-patient-list h1 {
+    color:black;
+    margin-top:40px;
+    padding:15px;
+    position: relative;
+    left:40%;
+    font-size:35px;
+}
+.back-link {
+    color:black;
+    font-size:20px;
+    text-decoration: none;
+    padding:10px;
+}
+.back-link:hover {
+    text-decoration: underline;
+
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.custom-button:hover {
+    background-color: #cccccc;
+}
+
+.patient-details-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* NÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶velt padding a tÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡blÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡zatban */
+table {
+    position: relative;
+    left:25px;
+    width: 97%;
+    padding: 10px;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-right:20px;
+}
+
+td {
+    border: 2px solid rgba(1, 3, 12, 0.96);
+    padding: 10px;
+    text-align: left;
+    background-color:#94afb442;
+    font-size:20px;
+    font-family:'italic' ;
+
+}
+
+th {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.patient-info {
+    color: rgba(1, 3, 12, 0.96);
+}
+
+.patient-list-back-link {
+    padding: 10px 25px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    top: -120px;
+    padding:10px;
+    font-size:20px;
+    font-weight:bolder;
+}
+
+.patient-list-back-link:hover {
+    text-decoration: underline;
+}
+.sel-back-link {
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+}
+sel-back-link:hover{
+    text-decoration: underline;
+}
+
+.add-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #9a1313;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+    position: relative;
+}
+
+.patients-list-add-new-link:hover {
+    background-color: #cccccc;
+}
+
+.add-doctor form {
+    margin: 10px;
+}
+
+.add-doctor label {
+    margin-right: 10px;
+}
+
+.add-doctor select {
+    padding: 5px;
+    min-width: 200px;
+    font-family:'italic';
+    font-size: 18px;
+}
+
+.add-doctor input[type="submit"] {
+    background-color: rgba(21, 22, 23, 0.93);
+    color: white;
+    padding: 5px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    size:25px 19px;
+    font-family:'italic';
+    font-size: 19px;
+}
+
+/* StÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â­lusok a select elem tartalmÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ra */
+.add-doctor select option {
+    padding: 5px;
+    font-family:'italic'
+}
+
+.add-doctor body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 10px;
+    padding: 50px;
+}
+
+
+.add-doctor form {
+    margin: 25px;
+    padding-left: 10px;
+    background-color: #00bcd417;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.add-doctor label {
+    display:inline;
+    margin-bottom: 5px;
+    font-family: 'italic';
+    font-size: 20px;
+
+
+}
+
+.add-doctor input, select {
+    font-size:20px;
+    width: 150px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.add-doctor input[type="submit"] {
+
+    background-color: #238f94c7;
+    margin-right: 100px;
+    color: #0a0505;
+    cursor: pointer;
+}
+
+.add-doctor input:focus, select:focus {
+    background-color: #e6f7ff;
+}
+.add-doctor back-link {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color:transparent;
+    color: rgb(0 2 9);
+    font-weight: bolder;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+}
+
+.add-doctor back-link:hover {
+    background-color: #a6c6e1;
+}
+
+/* A Patient details h1 elem stÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­lusa */
+.th-patient-details h1 {
+    margin-top: 50px;
+    font-style: normal;
+    color:#00a243de;
+    font-family:'italic';
+    font-size:30px;
+    padding:5px;
+}
+.th-patient-details h2 {
+    font-style: normal;
+    color:#00a243de;
+    font-family:'italic';
+    font-size:30px;
+    padding:5px;
+}
+
+.th-patient-details p  {
+    font-style: normal;
+    color: rgba(1, 3, 12, 0.96);
+    font-family:'italic';
+    font-weight: bolder;
+    font-size:17px;
+    margin:15px;
+}
+
+.patients-details-back-link {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color:transparent;
+    color: rgb(0 2 9);
+    font-weight: bolder;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    top:-360px;
+    padding:5px;
+}
+
+.patients-details-back-link:hover {
+    text-decoration: underline;
+}
+
+/* A Doctors list h1 elem stÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­lusa */
+div.th-doctors-list h1 {
+    font-family: 'italic';
+    color: rgba(1, 3, 12, 0.96);
+    padding:10px;
+    font-size:35px;
+
+}
+
+/* A Patient details h1 elem stÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­lusa */
+div.th-doctors-details h1 {
+    font-style: normal;
+    color: rgba(1, 3, 12, 0.96);
+    font-family:'italic';
+    font-size:35px;
+}
+
+div.th-doctors-details p {
+    font-style: normal;
+    color: rgba(1, 3, 12, 0.96);
+    font-family:'italic';
+    font-size:20px;
+    margin:25px;
+}
+form {
+    margin: 20px;
+    padding: 5px;
+    width:30%;
+    border-radius: 5px;
+}
+
+/* Style the label */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style the select dropdown */
+select {
+    width: 60%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    color: rgba(1, 3, 12, 0.96);
+    font-family:'italic';
+    font-size:15px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    width:30%;
+    border-radius: 5px;
+    color: rgba(1, 3, 12, 0.96);
+    font-family:'italic';
+    font-size:15px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+a.doctor-details-back-link {
+    color: #207a9a;
+    text-decoration: none;
+    font-weight:bolder;
+    font-size:20px;
+    position:relative;
+    left:40%;
+}
+a.doctor-details-back-link:hover {
+    text-decoration: underline;
+}
+.doctor-list-back-link {
+    color: black;
+    font-size:18px;
+    position:absolute;
+    margin:10px;
+}
+a.mod-doctors-back-link {
+    color: black;
+    font-size: 20px;
+}
+a.mod-doctors-back-link:hover {
+    text-decoration: underline;
+
+}
+/* ÃltalÃ¡nos testreszabÃ¡sok */
+.modify-patient-container {
+    max-width: 600px;
+    margin: 5px auto;
+    padding: 20px;
+    background-color:#c6e1e087;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.modify-patient {
+    background-image: url("3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.modify-patient h1 {
+    position:relative;
+    left: 40%;
+    font-size:35px
+}
+.modify-patient-doctor-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: rgba(1, 3, 12, 0.96);
+}
+
+.modify-patient-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-radius:5px;
+    color: #333;
+}
+
+.modify-patient-input[type="text"],
+.modify-patient-input[type="hidden"] {
+    width: 100%;
+    padding: 8px;
+    font-family:'italic';
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Gombok formÃ¡zÃ¡sa */
+input.modify-patient-submit,
+a.modify-patient-back-link {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+input.modify-patient-submit:hover,
+a.modify-patient-back-link:hover {
+    background-color: #0056b3;
+
+}
+
+a.modify-patient-back-link {
+    margin-left: 10px;
+    background-color: #6c757d;
+    border: 1px solid #6c757d;
+}

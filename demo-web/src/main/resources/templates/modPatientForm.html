@@ -1,0 +1,38 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Modify Patient</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body class="modify-patient">
+<h1 class="modify-patient-title">Modify Patient</h1>
+<form action="/modPatient" method="post" th:object="${patient}" class="modify-patient-form">
+    <div class="modify-patient-container">
+        <input type="hidden" id="id" name="id" th:value="*{id}" required value="">
+
+        <label for="name" class="modify-patient-label">Name:</label>
+        <input type="text" id="name" name="name" th:value="*{name}" required class="modify-patient-input"><br><br>
+
+        <label for="birthdate" class="modify-patient-label">Birth date:</label>
+        <input type="text" id="birthdate" name="birthDate" th:value="*{birthDate}" required class="modify-patient-input"><br><br>
+
+        <label for="locality" class="modify-patient-label">Locality:</label>
+        <input type="text" id="locality" name="locality" th:value="*{locality}" required class="modify-patient-input"><br><br>
+    </div>
+    <label for="doctor" class="modify-patient-doctor-label">Assigned doctor:</label>
+
+    <p th:text="*{doctor.name}"></p>
+    <select id="doctor" name="doctor" class="modify-patient-select">
+		<option th:each="doctor : ${doctors}"
+		th:value="${doctor.id}" th:text="${doctor.name}"
+		th:selected="${doctor.id == patient.doctor.id}">
+		</option>
+    </select>
+    <br>
+    <input type="submit" class="modify-patient-submit" value="Mod Patient">
+    <a href="/" class="modify-patient-back-link">Back</a>
+</form>
+</body>
+</html>

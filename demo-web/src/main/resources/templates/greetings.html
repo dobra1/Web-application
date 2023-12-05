@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Orvos részletei</h1>
+    <p style="color: blue;" th:text="${doctor.name}" />
+    <p style="color: blue;" th:text="${doctor.sealNumber}" />
+    <p style="color: blue;" th:text="${doctor.salary}" />
+    <p style="color: blue;" th:text="${doctor.birthDate}" />
+    <p style="color: blue;" th:text="${doctor.position}" />
+    <p style="color: blue;" th:text="${doctor.schedule}" />
+</body>
+</html>

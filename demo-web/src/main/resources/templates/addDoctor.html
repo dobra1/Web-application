@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add New Doctors</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body class = "add-doctor">
+<h1 th:text="(${mode.equals('new')})?'Add new Doctor':'Modify ' + doctor"></h1>
+<form th:action="@{/addDoctor}" th:object="${doctor}" method="post" class="styled-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" th:field="*{name}" required><br><br>
+
+
+    <input type="hidden" id="id" name="id" th:field="*{id}" required>
+
+    <label for="birthDate">Birthdate:</label>
+
+    <span th:unless="${mode.equals('new')}" th:text="*{birthDate}"></span>
+    <input th:unless="${mode.equals('new')}" type="hidden" id="birthDate" name="birthDate" th:field="*{birthDate}" >
+
+    <input th:if="${mode.equals('new')}"  type="date" id="birthDate" name="birthDate" th:field="*{birthDate}" required><br><br>
+
+    <label for="position">Position:</label>
+    <select id="position" name="position" th:field="*{position}" required>
+        <option value="Pulmonology">Pulmonology</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Oncology">Oncology</option>
+        <option value="Emergency">Emergency</option>
+        <option value="Dentist">Dentist</option>
+    </select><br><br>
+
+    <label for="sealNumber">Sealnumber:</label>
+    <input type="text" id="sealNumber" name="sealNumber" th:field="*{sealNumber}" required><br><br>
+    <input type="submit" value="Add Doctor">
+    <a th:href="@{/}" class="add-doctor-back-link">Back</a>
+</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title>Betegek</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/styles.css" type="text/css" rel="stylesheet">
+</head>
+<body class="patients-background">
+<div th:if="${errorMessage}">
+	<p class="error" th:text="${errorMessage}"></p>
+</div>
+<div th:if="${patients}" class="th-patient-list">
+    <h1>Patient list</h1>
+    <table>
+        <tr th:each="patient : ${patients}">
+            <td style="color: black;" th:text="${patient.id}" />
+            <td style="color: rgba(1,3,12,0.96);" th:text="${patient.name}" />
+            <td style="color: rgba(1,3,12,0.96);" th:text="${patient.locality}" />
+            <td style="color: black;" th:text="${patient.birthDate}" />
+            <td><a th:href="@{/patient(id=${patient.id})}" class="details-link">Details</a></td>
+        </tr>
+        <a th:href="@{/}" class="patient-list-back-link">Back</a>
+    </table>
+</div>
+
+<div th:if="${patient}" class="th-patient-details">
+    <h1>Patient details</h1>
+    <p style="color: black;" th:text="${patient.name}" />
+    <p style="color: black;" th:text="${patient.locality}" />
+    <p style="color: black;" th:text="${patient.birthDate}" />
+    <h2>Patient's doctors list</h2>
+    <p style="color: black;" th:if="${patient.doctor}" th:text="${patient.doctor.name}" />
+    <p style="color: black;" th:unless="${patient.doctor}" th:text="'no assigned doctor'" />
+
+    <ul th:each="doctor : ${patients}">
+        <li th:text="${doctor.name}"></li>
+    </ul>
+    <a th:href="@{/patients}" class="patients-details-back-link">Back</a>
+</div>
+</body>
+</html>

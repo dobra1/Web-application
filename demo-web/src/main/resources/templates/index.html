@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIPOCRATES KLINIKA</title>
+  <link rel="stylesheet" type="text/css" href="/index.css">
+  <style>
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .cn:hover,
+    .service a:hover {
+      animation: pulse 0.5s infinite;
+    }
+  </style>
+  <script src="script.js"></script>
+</head>
+
+<body>
+<div class="main">
+  <div class="navbar">
+    <div class="icon">
+      <h2 class="logo">HIPOCRATES <img src="logo14.png" alt="Logo"></h2>
+
+    </div>
+    <div class="menu">
+      <ul>
+        <li class="dropdown">
+          <a class="menu-button">ORVOSAINK</a>
+          <ul class="dropdown-content">
+            <a class="larger-text" th:href="@{/doctors}">Orvoslista</a>
+            <a class="larger-text" th:href="@{/addDoctor}">Új orvos</a>
+            <a class="larger-text" th:href="@{/modDoctorList}">Módósítás</a>
+            <a class="larger-text" th:href="@{/delDoctorList}">Törlés</a>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="menu-button">BETEGEINK</a>
+          <ul class="dropdown-content">
+            <a class="larger-text" th:href="@{/patients}">Beteglista</a>
+            <a class="larger-text" th:href="@{/addPatient}">Új beteg</a>
+            <a class="larger-text" th:href="@{/modPatientList}">Módósítás</a>
+            <a class="larger-text" th:href="@{/delPatientList}">Törlés</a>
+          </ul>
+        <li class="dropdown">
+          <a th:href="@{/foglalas}" class="menu-button">IDŐPONTFOGLALÁS</a>
+        </li>
+        <li class="dropdown">
+          <a href="/contact" class="menu-button">KAPCSOLATOK</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <h1 class="auto-typing common-text">SZAKRENDELÉSEK -<br><span>RENDELÉSI IDŐK -</span> <br>TELEFONSZÁMOK!</h1>
+  <p class="par auto-typing common-text">A várakozási idők és a zsúfoltságok csökkentése érdekében <br> kérjük, hogy a járóbeteg szakrendelésekre, az előjegyzett
+    <br> fekvőbeteg felvételekre az előre megbeszélt <br> időpontokban jelentkezzenek!<br>
+  </p>
+</div>
+
+</body>
+</html>

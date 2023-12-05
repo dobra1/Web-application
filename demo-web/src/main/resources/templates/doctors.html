@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+	<title>Doctors</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body class="doctors-background">
+<div th:if="${errorMessage}">
+	<p class="error" th:text="${errorMessage}"></p>
+</div>
+<form method="GET" th:action="@{/doctors}">
+    <label for="position">Position:</label>
+    <select id="position" name="position" required>
+    	<option value="All">All</option>
+        <option value="Pulmonology">Pulmonology</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Oncology">Oncology</option>
+        <option value="Emergency">Emergency</option>
+        <option value="Dentist">Dentist</option>
+    </select>
+    <input type="submit" value="Filter" />
+</form> 
+<div th:if="${doctors}" class="th-doctors-list">
+	<h1>Doctors list</h1>
+	<table>
+		<tr th:each="doctor : ${doctors}">
+			<td style="color: black;" th:text="${doctor.id}" />
+			<td style="color: black;" th:text="${doctor.name}" />
+			<td style="color: black;" th:text="${doctor.sealNumber}" />
+			<td style="color: black;" th:text="${doctor.salary}" />
+			<td style="color: black;" th:text="${doctor.birthDate}" />
+			<td style="color: black;" th:text="${doctor.position}" />
+			<td style="color: black;" th:text="${doctor.schedule}" />
+			<td><a th:href="@{/doctor(id=${doctor.id})}">Details</a></td>
+		</tr>
+	</table>
+	<a th:href="@{/}" class="doctor-list-back-link">Back</a>
+</div>
+
+<div th:if="${doctor}" class="th-doctors-details">
+	<h1>Doctor details</h1>
+	<p style="color: black;" th:text="${doctor.position}" />
+	<p style="color: black;" th:text="${doctor.name}" />
+	<p style="color: black;" th:text="${doctor.sealNumber}" />
+	<p style="color: black;" th:text="${doctor.salary}" />
+	<p style="color: black;" th:text="${doctor.birthDate}" />
+	<p style="color: black;" th:text="${doctor.schedule}" />
+	<h2 class="th-doctors-list-title">Doctor's patients list </h2>
+
+	<ul th:each="patient : ${patients}" class="th-doctors-list-info">
+		<li th:text="${patient.name}"></li>
+	</ul>
+
+	<a th:href="@{/doctors}" class="doctor-details-back-link">Back to the list</a>
+</div>
+</body>
+</html>

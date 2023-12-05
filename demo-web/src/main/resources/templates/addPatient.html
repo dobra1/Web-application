@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add new Patient</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body class = "add-patient">
+<h1>Add New Patient</h1>
+<form th:action="@{/addPatient}" th:object="${patient}" method="post">
+
+	<input type="hidden" id="id" name="id" th:field="*{id}" required>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" th:field="*{name}" required><br><br>
+
+    <label for="birthdate">Birth date:</label>
+    <input type="text" id="birthdate" name="birthdate" th:field="*{birthDate}" required><br><br>
+
+    <label for="locality">Locality:</label>
+    <input type="text" id="locality" name="locality"  th:field="*{locality}" required><br><br>
+
+	<label for="doctor">Assigned doctor:</label>
+	<select id="doctor" name="doctor" th:field="*{doctor}">
+		<option th:each="doctor : ${doctors}" th:text="${doctor.name}" th:value="${doctor.id}"></option>
+	</select>
+	<br>
+    <input type="submit" class="add-link" value="Add Patient">
+    <a th:href="@{/}" class="add-patient-back-link">Back</a>
+</form>
+</body>
+</html>
